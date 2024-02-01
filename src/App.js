@@ -6,18 +6,18 @@ import CheckOut from './components/checkout';
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-function App() {
-  return (
-    <main>
-        <BrowserRouter>
+const App = () =>(
+  <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/products' element={<Products></Products>}></Route>
-          <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
+          <Route exact path='/' Component={Home}></Route>
+          <Route exact path='/products' Component={Products}></Route>
+          <Route exact path='/checkout' Component={CheckOut}></Route>
         </Routes>
-        </BrowserRouter>
-    </main>
-  );
-}
+      </BrowserRouter>
+)
+  
+        
+  
+
 
 export default App;
